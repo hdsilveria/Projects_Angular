@@ -1,0 +1,7 @@
+<p [id]="atributoLegal">crud works! {{atributoLegal}}</p>
+
+<ul *ngFor="let it of item[0]">
+  <li>{{it.name}} - {{it.complete}} - {{it.id}} &nbsp;<button (click)="deleteItem(it.id)">Deletar</button></li>
+</ul>
+
+<app-create-user></app-create-user>

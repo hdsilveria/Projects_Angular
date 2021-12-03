@@ -1,0 +1,35 @@
+<div> <br><br>
+  <h2>Criar Item</h2>
+  <label>name
+    <input placeholder="inserir" [(ngModel)]="request.name">
+  </label> &nbsp;
+
+  <label>complete
+    <input placeholder="inserir" [(ngModel)]="request.complete">
+  </label>&nbsp;
+
+  <button (click)="createNewItem()">Enviar</button>
+</div>
+
+<div><br>
+  <h2>Editar Item</h2>
+  <label>name
+    <input placeholder="inserir" [(ngModel)]="requestUpdate.name">
+  </label> &nbsp;
+
+  <label>complete
+    <input placeholder="inserir" [(ngModel)]="requestUpdate.complete">
+  </label>&nbsp;
+
+  <label>id
+    <input placeholder="inserir" [(ngModel)]="requestUpdate.id">
+  </label>&nbsp;
+
+  <button (click)="updateItem()">Enviar</button>
+</div>
+
+<br>
+<div *ngIf="resposta">
+  <label>id: {{resposta.id}}</label><br>
+  <label>message: {{resposta.message}}</label>
+</div>
